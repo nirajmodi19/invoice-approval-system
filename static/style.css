@@ -1,0 +1,51 @@
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+td.description {
+    max-width: 300px; /* Set your preferred max width */
+    white-space: normal; /* Allow multi-line text */
+    word-wrap: break-word; /* Wrap long words */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+/* Table Container (Scrollable on Small Screens) */
+.table-responsive {
+    overflow-x: auto; /* Allow horizontal scrolling */
+    max-width: 100%;
+}
+
+/* Responsive Table (for Mobile) */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        display: block; /* Make table behave like a block (responsive) */
+        overflow-x: auto;
+    }
+
+    th, td {
+        white-space: nowrap; /* Prevent text overflow without breaking */
+    }
+
+    td.description {
+        max-width: 300px; /* Adjust this as needed */
+        white-space: normal;
+        word-wrap: break-word;
+    }
+}
